@@ -1,0 +1,46 @@
+#+TITLE: Starter Kit Scala
+#+OPTIONS: toc:nil num:nil ^:nil
+
+This is part of the [[file:starter-kit.org][Emacs Starter Kit]].
+
+* Starter kit Scala
+
+Support for the Scala programming language.
+
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+#+begin_src emacs-lisp
+ (dolist (package '(scala-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+end_src
+
+** Use Scala's scala-mode.el instead of Emacs' scala.el
+  :PROPERTIES:
+  :CUSTOM_ID: scala
+  :END:
+Replace the Scala mode that comes with Emacs by the Scala mode
+supplied by the Scala distribution itself.
+#+begin_src emacs-lisp
+(require 'scala-mode)
+(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
+(add-to-list 'interpreter-mode-alist '("scala" . scala-mode))
+#+end_src
+
+** Use ENSIME
+
+Load the ensime lisp code...
+
+This step causes the ensime-mode to be started whenever
+scala-mode is started for a buffer. You may have to customize this
+ step
+if you're not using the standard scala mode.
+
+#+begin_src emacs-lisp
+(add-to-list 'load-path "/home/jm/.emacs.d/ensime_2.9.2-0.9.8.1/elisp/")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+#+end_src
+
