@@ -1,0 +1,30 @@
+#+TITLE: Starter kit CoffeeScript
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+See [[https://github.com/defunkt/coffee-mode][Defunkt Coffee Mode]] for further customizations
+
+* Starter Kit CoffeeScript
+
+#+begin_src emacs-lips
+
+#+end_src
+
+
+#+begin_src emacs-lisp
+(defun coffee-custom ()
+  "coffee-mode-hook"
+
+  ;; CoffeeScript uses two spaces.
+  (make-local-variable 'tab-width)
+  (set 'tab-width 2)
+
+  ;; If you don't want your compiled files to be wrapped
+  (setq coffee-args-compile '("-c" "--bare"))
+
+  ;; Emacs key binding
+  (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
+)
+
+(add-hook 'coffee-mode-hook 'coffee-custom)
+#+end_src

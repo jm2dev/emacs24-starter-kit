@@ -1,4 +1,3 @@
-;; rename to <user>.el
 (ido-mode -1)
 
 (starter-kit-load "ruby")
@@ -6,6 +5,8 @@
 (starter-kit-load "scala")
 
 (starter-kit-load "js")
-(setq js-indent-level 2)
+
+(starter-kit-load "coffeescript")
+
 
 
