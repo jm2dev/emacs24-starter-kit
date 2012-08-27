@@ -1,0 +1,12 @@
+#+TITLE: Starter kit Jade
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+See [[https://github.com/brianc/jade-mode][Jade mode at github]].
+
+#+begin_src emacs-lisp
+(require 'sws-mode)
+(require 'jade-mode)    
+(add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
+(add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+#+end_src

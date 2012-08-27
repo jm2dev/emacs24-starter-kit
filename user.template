@@ -8,5 +8,5 @@
 
 (starter-kit-load "coffeescript")
 
-
+(starter-kit-load "jade")
 
