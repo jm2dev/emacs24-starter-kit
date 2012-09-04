@@ -10,3 +10,13 @@
 
 (starter-kit-load "jade")
 
+(starter-kit-load "scala")
+
+(starter-kit-load "js")
+
+(starter-kit-load "coffeescript")
+
+(starter-kit-load "jade")
+
+(starter-kit-load "xquery")
+

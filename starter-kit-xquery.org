@@ -1,0 +1,17 @@
+#+TITLE: Starter kit XQuery
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+
+See [[https://github.com/mblakele/xquery-mode][mblakele/xquery-mode]] for source code
+
+* Starter Kit XQuery
+
+#+BEGIN_SRC emacs-lisp 
+;; xquery mode
+(require 'xquery-mode)
+(autoload 'xquery-mode "xquery-mode" "XQuery mode" t )
+(setq auto-mode-alist
+      (append '(("\\.xqy$" . xquery-mode)) auto-mode-alist))  
+#+END_SRC
+
