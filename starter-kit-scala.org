@@ -39,8 +39,10 @@ scala-mode is started for a buffer. You may have to customize this
 if you're not using the standard scala mode.
 
 #+begin_src emacs-lisp
-(add-to-list 'load-path "/home/jm/.emacs.d/ensime_2.9.2-0.9.8.1/elisp/")
+(add-to-list 'load-path "~/.emacs.d/ensime_2.9.2-0.9.8.1/elisp/")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(push "/usr/local/bin/" exec-path)
+(push "~/bin/" exec-path)
 #+end_src
 
