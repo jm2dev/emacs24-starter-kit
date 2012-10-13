@@ -1,5 +1,7 @@
 (ido-mode -1)
 
+(tool-bar-mode -1)
+
 (starter-kit-load "ruby")
 
 (starter-kit-load "scala")
@@ -13,3 +15,20 @@
 (starter-kit-load "xquery")
 
 (load-theme 'zenburn t)
+
+(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;;(set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+
+;; maxframe
+(require 'maxframe)
+(defvar my-fullscreen-p t "Check if fullscreen is on or off")
+
+(defun my-toggle-fullscreen ()
+  (interactive)
+  (setq my-fullscreen-p (not my-fullscreen-p))
+  (if my-fullscreen-p
+	  (restore-frame)
+	(maximize-frame)))
+
+(global-set-key (kbd "M-RET") 'my-toggle-fullscreen)
+
