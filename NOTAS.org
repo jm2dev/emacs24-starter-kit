@@ -1,0 +1,7 @@
+* Sincronización con repositorio original
+
+#+BEGIN_SRC bash
+git remote add upstream git://github.com/eschulte/emacs24-starter-kit.git
+git fetch upstream
+git merge upstream/master
+#+END_SRC
