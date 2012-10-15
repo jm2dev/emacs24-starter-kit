@@ -1,0 +1,12 @@
+#+TITLE: Starter-kit-golden-ratio
+#+OPTIONS: toc:nil num:nil ^:nil
+
+* Github
+
+[[https://github.com/roman/golden-ratio.el][golden-ratio.el]]
+
+#+begin_src emacs-lisp
+(require 'golden-ratio)
+
+(golden-ratio-enable)
+#+end_src
