@@ -1,0 +1,23 @@
+(set-face-attribute 'default nil :font "Terminus-14")
+
+(load-theme 'zenburn t)
+
+(ido-mode -1)
+
+(tool-bar-mode -1)
+
+(starter-kit-load "ruby")
+
+(starter-kit-load "scala")
+
+(starter-kit-load "js")
+
+(starter-kit-load "coffeescript")
+
+(starter-kit-load "jade")
+
+(starter-kit-load "xquery")
+
+;;(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;;(set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+
