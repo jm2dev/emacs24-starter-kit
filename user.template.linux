@@ -18,6 +18,13 @@
 
 (starter-kit-load "xquery")
 
+(starter-kit-load "markdown")
+
+(starter-kit-load "golden-ratio")
+
+(starter-kit-load "maxframe")
+
 ;;(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 ;;(set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+
 

@@ -1,0 +1,20 @@
+#+TITLE: Starter kit Markdown
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+
+See [[http://jblevins.org/projects/markdown-mode/][Markdown mode]] for source code
+
+* Requisites
+
+1. [[http://daringfireball.net/projects/markdown/][Markdown]]
+
+* Starter Kit Markdown
+
+#+BEGIN_SRC emacs-lisp 
+(autoload 'markdown-mode "markdown-mode.el"
+   "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+#+END_SRC
+
