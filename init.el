@@ -15,3 +15,7 @@
 (org-babel-load-file (expand-file-name "starter-kit.org" starter-kit-dir))
 
 ;;; init.el ends here
+
+;;; for scala-mode2
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)

@@ -12,7 +12,7 @@ Support for the Scala programming language.
 Determine whether required packages are installed. If not, use ELPA to
 install them.
 #+begin_src emacs-lisp
- (dolist (package '(scala-mode))
+ (dolist (package '(scala-mode2))
    (unless (package-installed-p package)
      (package-install package)))
 #+end_src
@@ -24,9 +24,9 @@ install them.
 Replace the Scala mode that comes with Emacs by the Scala mode
 supplied by the Scala distribution itself.
 #+begin_src emacs-lisp
-(require 'scala-mode)
-(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
-(add-to-list 'interpreter-mode-alist '("scala" . scala-mode))
+(require 'scala-mode2)
+(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode2))
+(add-to-list 'interpreter-mode-alist '("scala" . scala-mode2))
 #+end_src
 
 ** Use ENSIME
