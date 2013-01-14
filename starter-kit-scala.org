@@ -25,8 +25,8 @@ Replace the Scala mode that comes with Emacs by the Scala mode
 supplied by the Scala distribution itself.
 #+begin_src emacs-lisp
 (require 'scala-mode2)
-(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode2))
-(add-to-list 'interpreter-mode-alist '("scala" . scala-mode2))
+;;(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
+;;(add-to-list 'interpreter-mode-alist '("scala" . scala-mode))
 #+end_src
 
 ** Use ENSIME
