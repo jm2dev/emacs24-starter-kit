@@ -1,4 +1,6 @@
-(set-face-attribute 'default nil :font "Inconsolata-16")
+;;(load-theme 'zenburn t)
+(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-light t)
 
 (ido-mode -1)
 
@@ -18,13 +20,11 @@
 
 (starter-kit-load "xquery")
 
-(starter-kit-load "markdown")
+;;(starter-kit-load "markdown")
 
 (starter-kit-load "golden-ratio")
 
-(load-theme 'zenburn t)
+(starter-kit-load "docbook")
 
-;;(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 ;;(set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-
-
