@@ -6,11 +6,6 @@ See [[https://github.com/defunkt/coffee-mode][Defunkt Coffee Mode]] for further 
 
 * Starter Kit CoffeeScript
 
-#+begin_src emacs-lips
-
-#+end_src
-
-
 #+begin_src emacs-lisp
 (defun coffee-custom ()
   "coffee-mode-hook"
