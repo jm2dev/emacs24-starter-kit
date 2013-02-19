@@ -7,19 +7,8 @@ See [[https://github.com/defunkt/coffee-mode][Defunkt Coffee Mode]] for further 
 * Starter Kit CoffeeScript
 
 #+begin_src emacs-lisp
-(defun coffee-custom ()
-  "coffee-mode-hook"
+(require 'coffee-mode)
 
-  ;; CoffeeScript uses two spaces.
-  (make-local-variable 'tab-width)
-  (set 'tab-width 2)
-
-  ;; If you don't want your compiled files to be wrapped
-  (setq coffee-args-compile '("-c" "--bare"))
-
-  ;; Emacs key binding
-  (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
-)
-
-(add-hook 'coffee-mode-hook 'coffee-custom)
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 #+end_src
