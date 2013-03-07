@@ -11,4 +11,8 @@ See [[https://github.com/defunkt/coffee-mode][Defunkt Coffee Mode]] for further 
 
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+
+(setq coffee-command "/usr/local/share/npm/bin/coffee")
+(setq coffee-args-compile '("-c"))
 #+end_src
+
