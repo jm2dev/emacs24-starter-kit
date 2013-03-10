@@ -4,6 +4,20 @@
 
 See [[https://github.com/brianc/jade-mode][Jade mode at github]].
 
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+#+begin_src emacs-lisp
+ (dolist (package '(sws-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+
+ (dolist (package '(jade-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+end_src
+
 #+begin_src emacs-lisp
 (require 'sws-mode)
 (require 'jade-mode)    

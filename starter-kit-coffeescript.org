@@ -6,6 +6,16 @@ See [[https://github.com/defunkt/coffee-mode][Defunkt Coffee Mode]] for further 
 
 * Starter Kit CoffeeScript
 
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+#+begin_src emacs-lisp
+ (dolist (package '(coffee-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+end_src
+
 #+begin_src emacs-lisp
 (require 'coffee-mode)
 
