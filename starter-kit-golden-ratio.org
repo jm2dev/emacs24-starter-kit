@@ -5,6 +5,17 @@
 
 [[https://github.com/roman/golden-ratio.el][golden-ratio.el]]
 
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+
+#+begin_src emacs-lisp
+ (dolist (package '(golden-ratio))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+end_src
+
 #+begin_src emacs-lisp
 (require 'golden-ratio)
 
