@@ -8,10 +8,26 @@ Settings to allow org-mode to export a pdf created with xslt and
 fo. Defaults to work is OSX with saxon and fop packages are installed
 using homebrew.
 
+** Fedora Linux
+
+Install the following dependencies:
+
+- fop
+- saxon
+- saxon-scripts
+- docbook5-style-xsl
+
 #+BEGIN_SRC emacs-lisp 
 (require 'org-docbook)
+;; OSX
+;(setq org-export-docbook-xsl-fo-proc-command "/usr/local/bin/fop \"%i\" \"%o\"")
+;(setq org-export-docbook-xslt-proc-command "/usr/local/bin/saxon -o:\"%o\" -s:\"%i\" -xsl:\"%s\"")
+;(setq org-export-docbook-xslt-stylesheet "/usr/local/Cellar/docbook/5.0/docbook/xsl-ns/1.77.1/fo/docbook.xsl")
 ;;
-(setq org-export-docbook-xsl-fo-proc-command "/usr/local/bin/fop \"%i\" \"%o\"")
-(setq org-export-docbook-xslt-proc-command "/usr/local/bin/saxon -o:\"%o\" -s:\"%i\" -xsl:\"%s\"")
-(setq org-export-docbook-xslt-stylesheet "/usr/local/Cellar/docbook/5.0/docbook/xsl-ns/1.77.1/fo/docbook.xsl")
+;; Fedora Linux
+(setq org-export-docbook-xsl-fo-proc-command "/usr//bin/fop \"%i\" \"%o\"")
+(setq org-export-docbook-xslt-proc-command "/usr/bin/saxon -o:\"%o\" -s:\"%i\" -xsl:\"%s\"")
+(setq org-export-docbook-xslt-stylesheet "/usr/share/sgml/docbook/xsl-ns-stylesheets-1.77.1/fo/docbook.xsl")
 #+END_SRC
+
+
