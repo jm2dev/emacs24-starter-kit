@@ -10,7 +10,7 @@ Check whether [[https://github.com/kingtim/nrepl.el][nrpel]] is installed, if no
 
 #+begin_src emacs-lisp
 ;; if it fails then M+x package-refresh-contents
- (dolist (package '(clojure-mode nrepl rainbow-delimiters-mode))
+ (dolist (package '(clojure-mode nrepl rainbow-delimiters))
    (unless (package-installed-p package)
      (package-install package)))
 #+end_src
