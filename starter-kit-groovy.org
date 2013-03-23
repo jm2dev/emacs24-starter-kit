@@ -1,0 +1,33 @@
+#+TITLE: Starter kit Groovy
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+* Starter Kit Groovy
+
+** Check dependencies
+
+#+begin_src emacs-lisp
+;; if it fails then M+x package-refresh-contents
+ (dolist (package '(groovy-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+end_src
+
+** Configuration
+
+#+begin_src emacs-lisp
+;;; turn on syntax highlighting
+(global-font-lock-mode 1)
+
+;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
+(autoload 'groovy-mode "groovy-mode" "Major mode for editing Groovy code." t)
+(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+(add-to-list 'interpreter-mode-alist '("groovy" . groovy-make))
+
+;;; mode Groovy mode electric by default.
+;(add-hook 'groovy-mode-hook
+;          '(lambda ()
+;             (require 'groovy-electric)
+;             (groovy-electric-mode)))
+#+end_src
+

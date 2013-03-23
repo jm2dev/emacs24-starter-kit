@@ -1,0 +1,46 @@
+(load-theme 'zenburn t)
+;;(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-light t)
+
+;;(ido-mode -1)
+
+;; on OSX make the command key the meta key
+;;(setq ns-command-modifier 'meta)
+
+(tool-bar-mode -1)
+
+(scroll-bar-mode -1)
+
+(starter-kit-load "ruby")
+
+(starter-kit-load "scala")
+
+(starter-kit-load "js")
+
+(starter-kit-load "coffeescript")
+
+(starter-kit-load "jade")
+
+(starter-kit-load "xquery")
+
+;;(starter-kit-load "markdown")
+
+(starter-kit-load "golden-ratio")
+
+(starter-kit-load "docbook")
+
+(starter-kit-load "clojure")
+
+(starter-kit-load "groovy")
+
+(set-default-font "-apple-Source_Code_Pro-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+;;(set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+
+;; sml
+(setenv "PATH" (concat "/usr/local/Cellar/smlnj/110.75/libexec/bin:" (getenv "PATH")))
+(setq exec-path (cons "/usr/local/Cellar/smlnj/110.75/libexec/bin" exec-path))
+
+;; textmate mode
+(require 'textmate)
+(textmate-mode)
+
