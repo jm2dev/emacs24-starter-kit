@@ -3,18 +3,26 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 
 
-See [[http://jblevins.org/projects/markdown-mode/][Markdown mode]] for source code
-
-* Requisites
-
-1. [[http://daringfireball.net/projects/markdown/][Markdown]]
+See [[http://jblevins.org/projects/markdown-mode/][Markdown mode]] for source code and [[http://daringfireball.net/projects/markdown/][Markdown]] for syntax help.
 
 * Starter Kit Markdown
 
-#+BEGIN_SRC emacs-lisp 
-(autoload 'markdown-mode "markdown-mode.el"
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+
+#+BEGIN_SRC emacs-lisp
+ (dolist (package '(markdown-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
-(setq auto-mode-alist
-   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 #+END_SRC
 

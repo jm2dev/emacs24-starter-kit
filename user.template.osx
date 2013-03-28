@@ -23,7 +23,7 @@
 
 (starter-kit-load "xquery")
 
-;;(starter-kit-load "markdown")
+(starter-kit-load "markdown")
 
 (starter-kit-load "golden-ratio")
 

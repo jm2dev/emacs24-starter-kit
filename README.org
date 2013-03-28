@@ -29,3 +29,11 @@ I added or modified some starter-kit-modes to fit my needs:
 - starter-kit-maxframe
 - starter-kit-markdown
 - starter-kit-golden-ratio
+
+** Markdown
+
+In osx, please install markdown
+
+#+BEGIN_SRC bash
+brew install markdown
+#+END_SRC
