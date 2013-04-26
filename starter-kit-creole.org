@@ -1,0 +1,25 @@
+#+TITLE: Starter kit Creole
+#+AUTHOR: Jose Miguel
+#+OPTIONS: toc:nil num:nil ^:nil
+
+Creole is wiki syntax language similar to markdown, see [[http://wikicreole.org/wiki/Creole1.0][creole syntax]].
+
+* Starter Kit Creole
+
+** Check Dependencies
+
+Determine whether required packages are installed. If not, use ELPA to
+install them.
+
+#+BEGIN_SRC emacs-lisp
+ (dolist (package '(creole creole-mode))
+   (unless (package-installed-p package)
+     (package-install package)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(autoload 'creole-mode "creole-mode"
+   "Major mode for editing creole files" t)
+(add-to-list 'auto-mode-alist '("\\.creole\\'" . creole-mode))
+#+END_SRC
+
